@@ -3,8 +3,22 @@
     <h2>Drag Drop example</h2>
   </div>
   <div class="content">
-    <div class="drag-box" cdkDrag>
+    <div class="drag-box" cdkDrag (cdkDragStarted)="onStarted($event)" (cdkDragEnded)="onEnded($event)" (cdkDragMoved)="onMoved($event)"> 
       Drag Me
+    </div>
+    <div class="drag-box" cdkDrag cdkDragLockAxis="x" (cdkDragStarted)="onStarted($event)" (cdkDragEnded)="onEnded($event)" (cdkDragMoved)="onMoved($event)">
+      Drag Me Horizontally
+    </div>
+    <div class="drag-box" cdkDrag cdkDragLockAxis="y" (cdkDragStarted)="onStarted($event)" (cdkDragEnded)="onEnded($event)" (cdkDragMoved)="onMoved($event)">
+      Drag Me Vertically
+    </div>
+  </div>
+  <div class="content">
+    <div *ngIf="state">
+      State: {{state}}
+    </div>
+    <div *ngIf="position">
+      Position: {{position}}
     </div>
   </div>
 </div>

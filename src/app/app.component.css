@@ -9,3 +9,15 @@
     grid-template-columns: 1fr auto;
     align-items: center;
 }
+
+.drag-box {
+    border: 2px solid #efefef;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.drag-box {
+    padding: 10px;
+}
